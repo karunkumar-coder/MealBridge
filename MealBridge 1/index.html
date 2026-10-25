@@ -1,0 +1,217 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#123d2d">
+  <meta name="description" content="MealBridge connects surplus food with people who need affordable meals.">
+  <title>MealBridge — Good Food. Second Chances.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="announcement">GOOD FOOD SHOULD NEVER GO TO WASTE <span>✳</span> JOIN THE FOOD RESCUE MOVEMENT</div>
+
+  <header class="header">
+    <a class="brand" href="#home"><span class="brand-icon">m<span>+</span></span> mealbridge<span class="brand-dot">.</span></a>
+    <nav class="desktop-nav">
+      <a href="#discover">Discover food</a>
+      <a href="#how">How it works</a>
+      <a href="#impact">Our impact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="text-btn" data-auth="login">Log in</button>
+      <button class="btn btn-dark btn-small" data-auth="signup">Join MealBridge <span>↗</span></button>
+    </div>
+    <button class="mobile-menu" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+  </header>
+
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="#discover">Discover food</a>
+    <a href="#how">How it works</a>
+    <a href="#impact">Our impact</a>
+    <button data-auth="login">Log in</button>
+    <button data-auth="signup">Create account</button>
+  </nav>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="live-dot"></span> THE FUTURE OF SURPLUS FOOD</div>
+        <h1>Good food.<br> <span class="serif-word">Second chances.</span></h1>
+        <p class="hero-desc">The food you save today could change someone's day. Discover delicious surplus meals at lower prices — or find food offered free by local providers.</p>
+        <div class="hero-actions">
+          <a class="btn btn-lime" href="#discover">Explore available food <span>↗</span></a>
+          <button class="btn btn-outline" data-auth="signup">Share surplus food <span>＋</span></button>
+        </div>
+        <div class="hero-proof">
+          <div class="avatar-stack"><span>🥗</span><span>🍲</span><span>🥘</span></div>
+          <div><strong>Every meal matters.</strong><br><span>One community. Less waste.</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-photo">
+          <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1100&q=85" alt="Fresh, colorful meal ready to be shared">
+          <div class="photo-shade"></div>
+          <div class="photo-label"><span class="live-dot"></span> FOOD FINDS A HOME</div>
+        </div>
+        <div class="floating-card floating-top">
+          <span class="float-icon">♧</span><div><strong>Saved from waste</strong><small>One meal at a time</small></div>
+        </div>
+        <div class="floating-card floating-bottom">
+          <div class="free-stamp">₹0</div><div><strong>Goodness for free</strong><small>Community food rescue</small></div>
+        </div>
+        <span class="orbit orbit-one"></span><span class="orbit orbit-two"></span>
+      </div>
+      <div class="hero-bottom"><span>01 / FOOD RESCUE, REIMAGINED</span><span>SCROLL TO DISCOVER ↓</span></div>
+    </section>
+
+    <section class="ticker" aria-label="Our mission">
+      <div class="ticker-track">
+        <span>LESS WASTE</span> ✳ <span>MORE SHARING</span> ✳ <span>BETTER PRICES</span> ✳ <span>STRONGER COMMUNITIES</span> ✳ <span>LESS WASTE</span> ✳ <span>MORE SHARING</span> ✳ <span>BETTER PRICES</span> ✳
+      </div>
+    </section>
+
+    <section class="section discover" id="discover">
+      <div class="section-heading reveal">
+        <div><div class="eyebrow">YOUR NEXT GOOD FIND</div><h2>Rescue something <span class="serif-word">delicious.</span></h2></div>
+        <p>Great food deserves a second chance. Browse nearby-style sample listings and discover your next meal.</p>
+      </div>
+
+      <div class="discovery-tools reveal">
+        <label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Search meals, dishes or providers..." aria-label="Search food"><kbd>↵</kbd></label>
+        <div class="filters" id="foodFilters">
+          <button class="filter active" data-filter="all">All food</button>
+          <button class="filter" data-filter="discount">Discounted</button>
+          <button class="filter" data-filter="free">Free food</button>
+        </div>
+      </div>
+
+      <div class="food-grid" id="foodGrid" aria-live="polite"></div>
+      <div class="empty-state hidden" id="emptyState"><span>🥣</span><h3>No meals found just yet.</h3><p>Try another search or filter.</p></div>
+      <div class="center-action"><button class="btn btn-outline" id="showAllBtn">Explore all meals ↓</button></div>
+      <p class="demo-note">Demo listings are illustrative, not verified live offers. Confirm food safety, pickup details and availability with the provider.</p>
+    </section>
+
+    <section class="split-section" id="how">
+      <div class="split-image">
+        <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1100&q=85" alt="A meal being prepared in a kitchen" loading="lazy">
+        <div class="image-note"><span>✳</span> A LITTLE EXTRA CAN DO A LOT.</div>
+      </div>
+      <div class="split-copy reveal">
+        <div class="eyebrow">SIMPLE BY DESIGN</div>
+        <h2>From extra food<br>to <span class="serif-word">extra good.</span></h2>
+        <div class="step-list">
+          <div class="step"><span class="step-num">01</span><div><h3>Providers list surplus</h3><p>Restaurants, cafés, bakeries and community kitchens share extra food, quantities and collection deadlines.</p></div></div>
+          <div class="step"><span class="step-num">02</span><div><h3>People discover & choose</h3><p>Find discounted meals or free food offers that match your needs and collection time.</p></div></div>
+          <div class="step"><span class="step-num">03</span><div><h3>Reserve. Collect. Repeat.</h3><p>Reserve available portions and follow the provider's collection instructions.</p></div></div>
+        </div>
+        <button class="btn btn-dark" data-auth="signup">Become part of it <span>↗</span></button>
+      </div>
+    </section>
+
+    <section class="pricing-section">
+      <div class="section-heading">
+        <div><div class="eyebrow">SMARTER SURPLUS PRICING</div><h2>Two ways to <span class="serif-word">make a difference.</span></h2></div>
+        <p>Providers choose prices and safe collection deadlines. MealBridge helps make both options easy to discover.</p>
+      </div>
+      <div class="pricing-grid">
+        <article class="price-card discount-card reveal">
+          <div class="price-icon">↘</div><span class="pill pill-discount">SAVE ON YOUR MEAL</span>
+          <h3>Still plenty of<br>time to enjoy.</h3>
+          <p>Food that can safely be kept until its listed collection deadline may be offered at a discounted price.</p>
+          <div class="price-example"><span>Regular price</span><strong>₹120</strong><i>→</i><span class="example-price">₹60</span></div>
+          <small>Illustrative example only. Providers set actual prices.</small>
+        </article>
+        <article class="price-card free-card reveal">
+          <div class="price-icon">♡</div><span class="pill pill-free">SHARE THE GOODNESS</span>
+          <h3>Time to share.<br>Nothing to pay.</h3>
+          <p>Providers can offer safe food for free when it needs prompt collection within its safe distribution window.</p>
+          <div class="free-banner"><span>₹</span> 0 <small>PAY NOTHING. WASTE LESS.</small></div>
+          <small>Free food must still meet applicable safety and storage requirements.</small>
+        </article>
+      </div>
+    </section>
+
+    <section class="impact-section" id="impact">
+      <div class="impact-decoration">✳</div>
+      <div class="eyebrow">A BETTER FOOD SYSTEM STARTS HERE</div>
+      <h2>Small rescues.<br><span class="serif-word">Big difference.</span></h2>
+      <p>Every listed meal is an opportunity to connect surplus with someone who can use it.</p>
+      <div class="impact-stats">
+        <div><strong id="listingCount">06</strong><span>Sample food listings</span></div>
+        <div><strong>₹0</strong><span>Cost of a free meal</span></div>
+        <div><strong>01</strong><span>Shared mission</span></div>
+      </div>
+      <button class="btn btn-lime" data-auth="signup">Start your food rescue journey ↗</button>
+    </section>
+
+    <section class="provider-cta">
+      <div><div class="eyebrow">FOR RESTAURANTS, CAFÉS & BAKERIES</div><h2>Your surplus can<br>be someone's <span class="serif-word">something.</span></h2><p>List what you have. Set a collection deadline. Help more food find a table.</p></div>
+      <button class="btn btn-dark" data-auth="signup">List surplus food <span>↗</span></button>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="brand brand-light" href="#home"><span class="brand-icon">m<span>+</span></span> mealbridge<span class="brand-dot">.</span></a>
+    <p>Good food should have a future.</p>
+    <div><a href="#discover">Discover</a><a href="#how">How it works</a><a href="#home">Back to top ↑</a></div>
+    <small>© 2026 MealBridge · A food rescue concept</small>
+  </footer>
+
+  <!-- Authentication dialog -->
+  <div class="modal-backdrop hidden" id="authModal" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+    <div class="auth-panel">
+      <button class="modal-close" data-close="authModal" aria-label="Close">×</button>
+      <div class="auth-brand">m<span>+</span></div>
+      <div class="eyebrow">WELCOME TO THE BRIDGE</div>
+      <h2 id="authTitle">Good to have you.</h2>
+      <p id="authSubtitle">Sign in to continue your food rescue journey.</p>
+      <div class="auth-tabs"><button class="auth-tab active" data-mode="login">Log in</button><button class="auth-tab" data-mode="signup">Sign up</button></div>
+      <form id="authForm">
+        <label id="nameField" class="hidden">Full name<input id="authName" autocomplete="name" placeholder="Your name"></label>
+        <label>Email address<input id="authEmail" type="email" autocomplete="email" placeholder="you@example.com" required></label>
+        <label>Password<input id="authPassword" type="password" minlength="6" autocomplete="current-password" placeholder="At least 6 characters" required></label>
+        <label id="roleField" class="hidden">I want to
+          <select id="authRole"><option value="buyer">Find affordable food</option><option value="provider">Share surplus food</option></select>
+        </label>
+        <button class="btn btn-dark auth-submit" id="authSubmit" type="submit">Log in ↗</button>
+        <p class="form-message" id="authMessage" aria-live="polite"></p>
+      </form>
+      <p class="auth-legal">Demo authentication only. Do not use a real password. Accounts are stored in this browser, not a secure server.</p>
+    </div>
+  </div>
+
+  <!-- List surplus dialog -->
+  <div class="modal-backdrop hidden" id="listingDialog" role="dialog" aria-modal="true" aria-labelledby="listingTitle">
+    <div class="auth-panel listing-panel">
+      <button class="modal-close" data-close="listingDialog" aria-label="Close">×</button>
+      <div class="eyebrow">SHARE YOUR SURPLUS</div><h2 id="listingTitle">Give good food a future.</h2>
+      <p>Provide accurate food safety and collection information.</p>
+      <form id="listingForm">
+        <label>Food name<input id="foodName" required maxlength="90" placeholder="Fresh meal boxes"></label>
+        <label>Provider name<input id="providerName" required maxlength="90" placeholder="Your café or kitchen"></label>
+        <label>Category<select id="foodCategory"><option>Meals</option><option>Bakery</option><option>Produce</option><option>Snacks</option><option>Dairy</option><option>Other</option></select></label>
+        <label>Number of portions<input id="foodQty" type="number" min="1" max="500" required value="5"></label>
+        <label>Offer type<select id="foodOffer"><option value="discount">Discounted</option><option value="free">Free</option></select></label>
+        <label id="priceField">Price per portion (₹)<input id="foodPrice" type="number" min="1" max="100000" value="50"></label>
+        <label>Safe collection deadline<input id="foodDeadline" type="datetime-local" required></label>
+        <label>Storage & food safety notes<textarea id="foodSafety" required maxlength="500" placeholder="Storage conditions, allergens, preparation time, etc."></textarea></label>
+        <label>Collection instructions<input id="foodLocation" required maxlength="180" placeholder="Area and pickup instructions"></label>
+        <label class="consent-label"><input id="foodSafe" type="checkbox" required> I confirm the food is safe to distribute, stored appropriately and can be collected before the stated deadline.</label>
+        <button class="btn btn-dark auth-submit" type="submit">Publish listing ↗</button>
+        <p class="form-message" id="listingMessage" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status"></div>
+  <button class="back-top" id="backTop" aria-label="Back to top">↑</button>
+  
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="script.js"></script>
+</body>
+</html>
